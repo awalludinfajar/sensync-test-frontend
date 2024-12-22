@@ -83,6 +83,12 @@ export const formController = (handleCloseModal, book, refreshTable) => {
                             text: "There was an error saving the form. Please check the errors.",
                             icon: "error",
                         });
+                    } else {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Error fetching, can't connect to server message: "+error,
+                            icon: "error",
+                        });
                     }
                 }
             }
